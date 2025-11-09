@@ -13,6 +13,7 @@ const PostsList = ({ initialPosts }) => {
     dispatch(setPosts(initialPosts));
     initialized.current = true;
   }
+  
 
   const posts = useAppSelector((state) => state.posts.list);
 

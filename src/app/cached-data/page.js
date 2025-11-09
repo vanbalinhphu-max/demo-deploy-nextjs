@@ -3,9 +3,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 const baseUrl =
-  process.env.NODE_ENV === "production"
-    ? `https://${process.env.VERCEL_URL}`
-    : 'http://localhost:3000'
+  process.env.NEXT_PUBLIC_BASE_URL
 
 async function fetchData() {
   console.log("fetching data");
