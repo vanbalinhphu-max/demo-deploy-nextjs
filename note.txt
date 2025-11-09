@@ -1,0 +1,5 @@
+                              context                                                                                     redux
+hiệu năng:            context thay đổi => TẤT CẢ component con sẽ bị rerender                     Chỉ những components nào sử dụng useSelector cho state đó
+
+=> khi nào nên sử dụng Context API ?
+=> khi noà sẽ dùng redux ở trong nextjs ?
