@@ -1,7 +1,10 @@
 import { clearTimestampCache } from "./action";
+const BASE_URL =
+    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
 async function fetchData() {
     console.log("fetching data");
-    const res = await fetch('http://localhost:3000/api/timestamp', {
+    const res = await fetch(`${BASE_URL}/api/timestamp`, {
         cache: "force-cache",
         next: { tags:['timestamp']}
     })
@@ -12,7 +15,6 @@ async function fetchData() {
 }
 export default async function CachedDataPage() {
     const data1 = await fetchData();
-    const data2 = await fetchData();
     return (
         <div>
             <h1>Dữ liệu đã được cache</h1>
